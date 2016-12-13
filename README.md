@@ -1,17 +1,17 @@
 # TrashCooking
 Site pour trouver quoi cuisiner avec les éléments de son frigo
 # Features
-|  Déscription                          | Techno        | Type  | Assignation |
-| ---------------------------------     |:-------------:| -----:| ----------- |
-| Authentification                      | devise        | gem   |     Colin   |
-| Mail                                  | mailgun       | gem   |     Colin   |
-| Roles                                 | code          |       |     Colin   |
-| Admin                                 | administrate  | gem   |   Cyril     |
-| Recherche                             | ransak        | gem   |     Colin   |
-| Match (recherche) ++                  | code          |       |   Cyril     |
-| Auto-complete (données en bdd)        | choosen       | gem   |   Cyril     |
-| Admin                                 | administrate  | gem   |   Cyril     |
-| Ajouter des recettes et ingrédients ++| code          |       |   Cyril     |
+|  Déscription                          | Techno        | Type  | Assignation |Fait |
+| ---------------------------------     |:-------------:| -----:| ----------- |[]  |
+| Authentification                      | devise        | gem   |   --Colin   |[]  |
+| Mail                                  | mailgun       | gem   |   --Colin   |[]  |
+| Roles                                 | code          | bdd   |   --Colin   |[]  |
+| Admin                                 | administrate  | gem   |   Cyril     |[]  |
+| Recherche                             | ransak        | gem   |   --Colin   |[]  | 
+| Match (recherche) ++                  | code          |       |   --Colin   |[]  |
+| Auto-complete (données en bdd)        | choosen       | gem   |   Cyril     |[]  |
+| Ajouter des recettes et ingrédients ++| code          |       |   Cyril     |[]  |
+| Graphisme Interface utilisateur       | bootstrap     | gem   |   --Colin   |[]  |
 
 # Features
 
