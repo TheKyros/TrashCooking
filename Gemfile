@@ -53,3 +53,7 @@ ruby "2.3.0"
 
 #Devise (13/12/2016)
 gem 'devise'
+
+
+#Devise (13/12/2016)
+gem 'mailgun'
