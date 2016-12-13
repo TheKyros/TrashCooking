@@ -18,11 +18,10 @@ Site pour trouver quoi cuisiner avec les éléments de son frigo
 
 
 ## Commit d'une branche
-`
-git add .                       (Enregistrer ce qu'on a fait dans le commit)
-git commit -m 'Commentaire'     (Créer un point avec commentaire)
-git push origin feature/XXX     (Mettre dans GH)
-`
+1. `git add .`                       (Enregistrer ce qu'on a fait dans le commit)
+2. `git commit -m 'Commentaire'`     (Créer un point avec commentaire)
+3. `git push origin feature/XXX`     (Mettre dans GH)
+
 
 ## Changement de branche
 
