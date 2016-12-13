@@ -14,17 +14,21 @@ Site pour trouver quoi cuisiner avec les éléments de son frigo
 # Features
 
 ## Création d'une branche
+`code`
 git checkout -b feature/XXX    (Change de branche)
-
+`code`
 
 ## Commit d'une branche
+`code`
 git add .                       (Enregistrer ce qu'on a fait dans le commit)
 git commit -m 'Commentaire'     (Créer un point avec commentaire)
 git push origin feature/XXX     (Mettre dans GH)
+`code`
 
 ## Changement de branche
-
+`code`
 1) git checkout develop         (Passer sur develop)
 2) git pull origin develop      (récupération code de GH)
 3) git checkout -b feature/YYY  (création de la branche)
 4) git branch -d feature/XXX    (supression de l'ancienne branche)
+`code`
