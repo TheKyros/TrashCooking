@@ -26,7 +26,7 @@ git push origin feature/XXX     (Mettre dans GH)
 
 ## Changement de branche
 
-1) `git checkout develop`         (Passer sur develop)
-2) `git pull origin develop`      (récupération code de GH)
-3) `git checkout -b feature/YYY`  (création de la branche)
-4) `git branch -d feature/XXX`    (supression de l'ancienne branche)
+1. `git checkout develop`         (Passer sur develop)
+2. `git pull origin develop`      (récupération code de GH)
+3. `git checkout -b feature/YYY`  (création de la branche)
+4. `git branch -d feature/XXX`    (supression de l'ancienne branche)
