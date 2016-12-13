@@ -50,3 +50,6 @@ end
 gem 'rails_12factor', group: :production
 ruby "2.3.0"
 
+
+#Devise (13/12/2016)
+gem 'devise'
