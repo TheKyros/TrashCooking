@@ -66,7 +66,7 @@ Rails.application.configure do
 
 
   # Devise (13/12/2016)
-  config.action_mailer.default_url_options = { host: 'https://secure-river-21987.herokuapp.com', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'https://secure-river-21987.herokuapp.com'}
   
   # Mailgun (13/12/2016)
   
