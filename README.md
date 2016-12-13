@@ -2,7 +2,7 @@
 Site pour trouver quoi cuisiner avec les éléments de son frigo
 # Features
 |  Déscription                          | Techno        | Type  | Assignation |Fait |
-| ---------------------------------     |:-------------:| -----:| ----------- |[]  |
+| ---------------------------------     |:-------------:| -----:| ----------- | --- |
 | Authentification                      | devise        | gem   |   --Colin   |[]  |
 | Mail                                  | mailgun       | gem   |   --Colin   |[]  |
 | Roles                                 | code          | bdd   |   --Colin   |[]  |
