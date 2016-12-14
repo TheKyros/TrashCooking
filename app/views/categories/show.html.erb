@@ -1,12 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <h1><%= @category.name %></h1>
-
-<table class="table table-condensed" style="width: 500px;">
+<div class="col-lg-12">
+<div class="col-lg-6">
+<table class="table table-condensed datatable">
   <thead>
     <tr>
       <th>Aliments</th>
-      <th colspan="3"></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -14,29 +15,39 @@
     <tr>
       <td><%= food.name %></td>
       <td class="text-center">
+        <span>
         <%= link_to category_food_path(@category, food) do %> 
         <span class="glyphicon glyphicon-eye-open" style="color:green"></span>
         <% end %>
-      </td>
-      <td class="text-center">
+        </span>
         <%= link_to edit_category_food_path(@category, food) do %> 
         <span class="glyphicon glyphicon-edit"></span>
         <% end %>
-      </td>
-      <td class="text-center">
+      </span>
+      <span>
         <%= link_to category_food_path(@category, food), method: :delete, data: { confirm: 'Are you sure?' } do %>
         <span class="glyphicon glyphicon-trash" style="color:red"></span>
         <% end %>
-      </td>
+      </span>
     </tr>
     <% end %>
   </tbody>
 </table>
+</div>
+</div>
+<div class="col-lg-6">
+<h3>Rechercher</h3>
 
-<br>
-<%= link_to 'New Food', new_category_food_path(@category) %>
-<br>
+<select id="select-2" name="select" multiple="true" style="    width: 100%;">
+      <% @category.foods.each do |food| %>
+      <option value="<%= food.name %>"><%= food.name %></option> 
+    <% end %>
+</select>
 
+<p>
+<%= link_to 'Ajouter un aliment', new_category_food_path(@category) %>
+</p>
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+<p><%= link_to 'Modifier la catégorie', edit_category_path(@category) %></p>
+<p><%= link_to 'Retour à la liste de catégories', categories_path %></p>
+</div>
