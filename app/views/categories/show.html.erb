@@ -33,12 +33,17 @@
   </tbody>
 </table>
 
+<h3>Rechercher</h3>
 
-<p><%= f.association :author,
-                  collection: User.all,
-                  include_blank: true,
-                  input_html: { class: 'chosen-select' }
-%></p>
+<select class="select2" name="select">
+  <option value="value1">Valeur 1</option> 
+  <option value="value2" selected>Valeur 2</option>
+</select>
+<script>
+  $( "#select2" ).select2({
+    theme: "bootstrap"
+});
+</script>
 
 <p>
 <%= link_to 'Ajouter un aliment', new_category_food_path(@category) %>

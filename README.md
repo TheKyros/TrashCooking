@@ -3,14 +3,14 @@ Site pour trouver quoi cuisiner avec les éléments de son frigo
 # Features
 |  Déscription                          | Techno        | Type  | Assignation |Fait |
 | ---------------------------------     |:-------------:| -----:| ----------- | --- |
-| Authentification                      | devise        | gem   |   --Colin   |[]  |
-| Mail                                  | mailgun       | gem   |   --Colin   |[]  |
-| Roles                                 | code          | bdd   |   --Colin   |[]  |
-| Admin                                 | administrate  | gem   |   Cyril     |[]  |
+| Authentification                      | devise        | gem   |   --Colin   |[x]  |
+| Mail                                  | mailgun       | gem   |   --Colin   |[x]  |
+| Roles                                 | code          | bdd   |   Cyril     |[]  |
 | Recherche                             | ransak        | gem   |   --Colin   |[]  | 
 | Match (recherche) ++                  | code          |       |   --Colin   |[]  |
 | Auto-complete (données en bdd)        | choosen       | gem   |   Cyril     |[]  |
 | Ajouter des recettes et ingrédients ++| code          |       |   Cyril     |[]  |
+| Admin                                 | administrate  | gem   |   Cyril     |[]  |
 | Graphisme Interface utilisateur       | bootstrap     | gem   |   --Colin   |[]  |
 
 # Features
