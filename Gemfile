@@ -70,3 +70,5 @@ gem 'chosen-rails'
 
 ## Select2
 gem "select2_rails"
+
+gem 'jquery-datatables-rails', '~> 3.4.0'

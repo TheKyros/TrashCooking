@@ -1,5 +1,13 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-*= require chosen-compass
-//@import "chosen-compass";
+//*= require chosen-compass
+@import "chosen-compass";
+
+//*= require select2-bootstrap
+//*= require select2
+
+@import "select2";
+@import "select2-bootstrap";
+
+@import "dataTables/jquery.dataTables"
