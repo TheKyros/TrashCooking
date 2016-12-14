@@ -1,0 +1,70 @@
+<%= form_for(@recipe) do |f| %>
+  <% if @recipe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
+
+      <ul>
+      <% @recipe.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+    <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+    </div>
+    
+    <div class="field">
+      Catégorie : 
+    <select name="category">
+      <option value="Entrée">Entrée</option> 
+      <option value="Plat">Plat</option>
+      <option value="Dessert">Dessert</option>
+    </select>
+    </div>
+    
+    <div class="field">
+    Pour 
+    <%= f.number_field :how_many_ppl %>
+     personne(s)
+    </div>
+    
+    <div class="field">
+    Difficulté : 
+    <select name="difficulty">
+      <option value="1">Easy</option> 
+      <option value="2">Medium</option>
+      <option value="3">Hardcore</option>
+    </select>
+    </div>
+    
+    <div class="field">
+    <%= number_field_tag(:preparation_time, nil, min: 0, max: 99 minutes) %>
+    </div>
+    
+    <div class="field">
+    Temps de cuisson : 
+    <%= f.text_field :cook_time %> minutes
+    </div>
+    
+    <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+    </div>
+    
+    <div class="field">
+    <%= f.label :optional_food %><br>
+    <%= f.text_area :optional_food %>
+    </div>
+    
+    <div class="field">
+    <%= f.label :photo %><br>
+    <%= f.file_field :photo %>
+    </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
