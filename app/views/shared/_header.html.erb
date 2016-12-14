@@ -16,10 +16,10 @@
       <ul class="nav navbar-nav">
 
         <li class="food">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ingrédients <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Catégories d'ingredients <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Ajout</a></li>
-            <li><a href="#">Liste</a></li>
+            <li><%= link_to 'Liste categories', categories_path %></li>
+            <li><%= link_to 'Nouvelle categorie', new_category_path %></li>
           </ul>
         </li>
           <li class="meal">
