@@ -64,6 +64,25 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
 
+
+  # Devise (13/12/2016)
+  config.action_mailer.default_url_options = { host: 'https://secure-river-21987.herokuapp.com'}
+  
+  # Mailgun (13/12/2016)
+  
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :authentication => :plain,
+    :address => "smtp.mailgun.org",
+    :port => 587,
+    :domain => "sandboxb41270bb95954f30a638ab8f38f42d2f.mailgun.org",
+    :user_name => "postmaster@sandboxb41270bb95954f30a638ab8f38f42d2f.mailgun.org",
+    :password => "37b9fb9137ce955a758dd3bdd1406db4"
+  }
+  
+  
+
+
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true

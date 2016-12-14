@@ -18,6 +18,19 @@ Rails.application.configure do
   
   # Devise (13/12/2016)
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  
+  # Mailgun (13/12/2016)
+  
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :authentication => :plain,
+    :address => "smtp.mailgun.org",
+    :port => 587,
+    :domain => "sandboxb41270bb95954f30a638ab8f38f42d2f.mailgun.org",
+    :user_name => "postmaster@sandboxb41270bb95954f30a638ab8f38f42d2f.mailgun.org",
+    :password => "37b9fb9137ce955a758dd3bdd1406db4"
+  }
+
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
