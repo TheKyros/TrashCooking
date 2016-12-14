@@ -33,10 +33,16 @@
   </tbody>
 </table>
 
-<br>
-<%= link_to 'New Food', new_category_food_path(@category) %>
-<br>
 
+<p><%= f.association :author,
+                  collection: User.all,
+                  include_blank: true,
+                  input_html: { class: 'chosen-select' }
+%></p>
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+<p>
+<%= link_to 'Ajouter un aliment', new_category_food_path(@category) %>
+</p>
+
+<p><%= link_to 'Modifier la catégorie', edit_category_path(@category) %></p>
+<p><%= link_to 'Retour à lalsite de catégories', categories_path %></p>

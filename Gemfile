@@ -57,3 +57,10 @@ gem 'devise'
 
 #Devise (13/12/2016)
 gem 'mailgun'
+
+# Ransack (14/12/2016)
+gem 'ransack', github: 'activerecord-hackery/ransack'
+
+# Chosen (14/12/2016)
+gem 'compass-rails'
+gem 'chosen-rails'
