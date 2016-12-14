@@ -41,7 +41,7 @@
     </div>
     
     <div class="field">
-    <%= number_field_tag(:preparation_time, nil, min: 0, max: 99 minutes) %>
+    <%= f.number_field(:preparation_time, {min: 0, max: 99}) %>
     </div>
     
     <div class="field">
