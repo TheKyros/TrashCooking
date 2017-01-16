@@ -5,13 +5,13 @@ Site pour trouver quoi cuisiner avec les éléments de son frigo
 | ---------------------------------     |:-------------:| -----:| ----------- | --- |
 | Authentification                      | devise        | gem   |   --Colin   |[x]  |
 | Mail                                  | mailgun       | gem   |   --Colin   |[x]  |
-| Auto-complete (données en bdd)        | choosen       | gem   |   --Colin   |[]   |
+| Auto-complete (données en bdd)        | choosen (select2)      | gem   |   --Colin   |[] reste à ajouter dans les pages   |
+| Recherche des recettes avec son nom   | ransak (datatables + yaodcf)        | gem   |   --Colin   |[]   |
 | Match (recherche des recettes en fonction des aliments) | code | |  --Colin |[]   |
-| Ajouter des recettes et ingrédients   | code          |       |   Cyril     |[]   |
-| Recherche des recettes avec son nom   | ransak        | gem   |   Cyril     |[]   | 
-| Admin                                 | administrate  | gem   |   Cyril     |[]   |
-| Roles                                 | code          | bdd   |   Cyril     |[]   |
-| Graphisme Interface utilisateur       | bootstrap     | gem   |   --Colin   |[]   |
+| Ajouter des recettes et ingrédients   | code          |       |   Cyril     |[] en cours  | 
+| Zone Admin                            | administrate  | gem   |   Cyril     |[]   |
+| Roles                                 | code          | bdd   |   Cyril     |[] à la fin  |
+| Graphisme Interface utilisateur       | bootstrap     | gem   |   --Colin   |[] en cours  |
 
 # Features
 
