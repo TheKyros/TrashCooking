@@ -33,3 +33,17 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+<ul>
+    <p>
+    <% if user_signed_in? %>
+    <p>
+      <%= "Bonjour #{current_user.email}" %>
+    </p>
+      <p>
+      <%= link_to 'Se déconnecter', destroy_user_session_path, method: :delete %>
+      </p>
+    <% else %>
+        <%= link_to 'Se connecter', new_user_session_path %>
+    <% end %>
+</ul>
+
