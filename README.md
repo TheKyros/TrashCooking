@@ -5,13 +5,13 @@ Site pour trouver quoi cuisiner avec les éléments de son frigo
 | ---------------------------------     |:-------------:| -----:| ----------- | --- |
 | Authentification                      | devise        | gem   |   --Colin   |[x]  |
 | Mail                                  | mailgun       | gem   |   --Colin   |[x]  |
-| Roles                                 | code          | bdd   |   Cyril     |[]  |
-| Recherche                             | ransak        | gem   |   --Colin   |[]  | 
-| Match (recherche) ++                  | code          |       |   --Colin   |[]  |
-| Auto-complete (données en bdd)        | choosen       | gem   |   Cyril     |[]  |
-| Ajouter des recettes et ingrédients ++| code          |       |   Cyril     |[]  |
-| Admin                                 | administrate  | gem   |   Cyril     |[]  |
-| Graphisme Interface utilisateur       | bootstrap     | gem   |   --Colin   |[]  |
+| Match (recherche des recettes en fonction des aliments)                  | code          |       |   --Colin   |[]   |
+| Auto-complete (données en bdd)        | choosen       | gem   |   --Colin   |[]   |
+| Ajouter des recettes et ingrédients ++| code          |       |   Cyril     |[]   |
+| Recherche des recettes                | ransak        | gem   |   Cyril     |[]   | 
+| Admin                                 | administrate  | gem   |   Cyril     |[]   |
+| Roles                                 | code          | bdd   |   Cyril     |[]   |
+| Graphisme Interface utilisateur       | bootstrap     | gem   |   --Colin   |[]   |
 
 # Features
 
@@ -31,3 +31,9 @@ Site pour trouver quoi cuisiner avec les éléments de son frigo
 2. `git pull origin develop`      (récupération code de GH)
 3. `git checkout -b feature/YYY`  (création de la branche)
 4. `git branch -d feature/XXX`    (supression de l'ancienne branche)
+5.
+
+## Heroku
+
+.Met à jour la DB dans heroku : `heroku run rake db:migrate`
+.Lie le compte cloud9 au heroku : `heroku git:remote -a secure-river-XXXXX`
