@@ -25,6 +25,7 @@ class UserDashboard < Administrate::BaseDashboard
     unconfirmed_email: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
+    isadmin: Field::Boolean,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -37,6 +38,8 @@ class UserDashboard < Administrate::BaseDashboard
     :email,
     :encrypted_password,
     :reset_password_token,
+    :isadmin,
+    :confirmed_at,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -59,6 +62,7 @@ class UserDashboard < Administrate::BaseDashboard
     :unconfirmed_email,
     :created_at,
     :updated_at,
+    :isadmin,
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -67,7 +71,7 @@ class UserDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :email,
     :encrypted_password,
-    :reset_password_token,
+    #:reset_password_token,
     #:reset_password_sent_at,
     #:remember_created_at,
     #:sign_in_count,
@@ -75,10 +79,11 @@ class UserDashboard < Administrate::BaseDashboard
     #:last_sign_in_at,
     #:current_sign_in_ip,
     #:last_sign_in_ip,
-    :confirmation_token,
-    #:confirmed_at,
+    #:confirmation_token,
+    :confirmed_at,
     #:confirmation_sent_at,
-    :unconfirmed_email,
+    #:unconfirmed_email,
+    :isadmin,
   ].freeze
 
   # Overwrite this method to customize how users are displayed
