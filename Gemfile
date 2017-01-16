@@ -57,3 +57,18 @@ gem 'devise'
 
 #Devise (13/12/2016)
 gem 'mailgun'
+
+
+# Search (14/12/2016)
+
+## Ransack 
+gem 'ransack', github: 'activerecord-hackery/ransack'
+
+## Chosen
+gem 'compass-rails'
+gem 'chosen-rails'
+
+## Select2
+gem "select2_rails"
+
+gem 'jquery-datatables-rails', '~> 3.4.0'

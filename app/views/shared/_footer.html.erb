@@ -1,5 +1,18 @@
 
+
+<script>
+
+$(document).ready(function() {
+      $("table").DataTable();
+      
+      $( "#select-2" ).select2({
+      });
+
+} );
+</script>
+
+
 <footer class="container">
-      <p><%= Time.current %></p>
-      <p>&copy; Company 2016</p>
+      <% t = Time.current %>
+      <p>&copy; Trashcooking <%= t.year() %></p>
 </footer>
