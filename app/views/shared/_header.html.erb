@@ -25,13 +25,25 @@
           <li class="meal">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Recettes <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Ajout de recette</a></li>
-            <li><a href="#">Liste des recettes</a></li>
-            <li><a href="#">Ajout des catégories</a></li>
-            <li><a href="#">Liste des catégories</a></li>
+            <li><%= link_to 'Liste recettes', recipes_path %></li>
+            <li><%= link_to 'Nouvelle recette', new_recipe_path %></li>
           </ul>
         </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+    <p>
+    <% if user_signed_in? %>
+    <p>
+      <%= "Bonjour #{current_user.email}" %>
+    </p>
+      <p>
+      <%= link_to 'Se déconnecter', destroy_user_session_path, method: :delete %>
+      </p>
+    <% else %>
+        <%= link_to 'Se connecter', new_user_session_path %>
+    <% end %>
+
+

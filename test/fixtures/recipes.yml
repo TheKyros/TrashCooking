@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  how_many_ppl: 1
+  category: MyString
+  difficulty: 1
+  preparation_time: 2016-12-14 10:47:01
+  cook_time: 2016-12-14 10:47:01
+  optional_food: MyString
+  description: MyString
+  photo: MyString
+
+two:
+  name: MyString
+  how_many_ppl: 1
+  category: MyString
+  difficulty: 1
+  preparation_time: 2016-12-14 10:47:01
+  cook_time: 2016-12-14 10:47:01
+  optional_food: MyString
+  description: MyString
+  photo: MyString

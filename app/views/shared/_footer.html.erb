@@ -1,8 +1,9 @@
 
+
 <script>
 
 $(document).ready(function() {
-      $("body > div > table").DataTable();
+      $("table").DataTable();
       
       $( "#select-2" ).select2({
       });
@@ -10,7 +11,8 @@ $(document).ready(function() {
 } );
 </script>
 
+
 <footer class="container">
-      <p><%= Time.current %></p>
-      <p>&copy; Company 2016</p>
+      <% t = Time.current %>
+      <p>&copy; Trashcooking <%= t.year() %></p>
 </footer>

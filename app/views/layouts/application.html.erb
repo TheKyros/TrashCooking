@@ -9,9 +9,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
+
 <%= render partial: 'shared/header'%>
   <div class="container">
-  <%= yield %>
+      <p id="notice"><%= notice %></p>
+      <%= yield %>
+
   </div>
 <%= render partial: 'shared/footer'%>
 
