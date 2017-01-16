@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   resources :categories do
     resources :foods, except: [:index]
   end
+  
+  resources :recipes
 
   # Example resource route with options:
   #   resources :products do
