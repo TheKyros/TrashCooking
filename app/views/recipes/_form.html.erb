@@ -11,60 +11,65 @@
     </div>
   <% end %>
   
-    <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <div class="form-group">
+    <label for="name">Nom de la recette</label>
+    <%= f.text_field :name, :class => 'form-control' %>
+    </div>
+    
+    <!--<div class="field">-->
+    <!--  Catégorie : -->
+    <!--<select name="recipe[category]">-->
+    <!--  <option value="Entrée">Entrée</option> -->
+    <!--  <option value="Plat">Plat</option>-->
+    <!--  <option value="Dessert">Dessert</option>-->
+    <!--</select>-->
+    <!--</div>-->
+    
+    <div class="form-group">
+    <label for="category">Catégorie de la recette</label>
+    <%= f.select( :category, ['Entrée', 'Plat', 'Dessert'], {}, {class:'form-control'}) %>
+    </div>
+    
+    <div class="form-group">
+    <label for="category">Nombre de personnes</label>
+    <%= f.number_field( :how_many_ppl, {min: 0, max: 20, class:'form-control'})%>
+    </div>
+    
+    <div class="form-group">
+    <label for="difficulty">Difficulté</label>
+    <%= f.select :difficulty, options_for_select([['Facile', 1], ['Moyen', 2], ['Difficile', 3]], selected: @recipe.difficulty), {}, class:'form-control'%>
     </div>
     
     <div class="field">
-      Catégorie : 
-    <select name="category">
-      <option value="Entrée">Entrée</option> 
-      <option value="Plat">Plat</option>
-      <option value="Dessert">Dessert</option>
-    </select>
+    <label for="preparation_time">Temps de preparation (minutes)</label>
+    <%= f.number_field(:preparation_time, {min: 0, max: 600, required:'true', class:'form-control'}) %>
     </div>
     
     <div class="field">
-    Pour 
-    <%= f.number_field :how_many_ppl %>
-     personne(s)
-    </div>
-    
-    <div class="field">
-    Difficulté : 
-    <select name="difficulty">
-      <option value="1">Easy</option> 
-      <option value="2">Medium</option>
-      <option value="3">Hardcore</option>
-    </select>
-    </div>
-    
-    <div class="field">
-    <%= f.number_field(:preparation_time, {min: 0, max: 99}) %>
-    </div>
-    
-    <div class="field">
-    Temps de cuisson : 
-    <%= f.text_field :cook_time %> minutes
+    <label for="cook_time">Temps de cuisson (minutes)</label>
+    <%= f.number_field(:cook_time, {min: 0, max: 600, required:'true', class:'form-control'}) %>
     </div>
     
     <div class="field">
     <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, {required:'true', class:'form-control'} %>
     </div>
     
     <div class="field">
     <%= f.label :optional_food %><br>
-    <%= f.text_area :optional_food %>
+    <%= f.text_area :optional_food, :class => 'form-control' %>
     </div>
     
     <div class="field">
     <%= f.label :photo %><br>
     <%= f.file_field :photo %>
     </div>
-
-  <div class="actions">
+    
+      <div class="actions">
     <%= f.submit %>
   </div>
+    
+    
+
+
 <% end %>
