@@ -7,8 +7,8 @@ Site pour trouver quoi cuisiner avec les éléments de son frigo
 | Mail                                  | mailgun       | gem   |   --Colin   |[x]  |
 | Auto-complete recette                 | select2       | gem   |   --Colin   |[x]  |
 | Recherche des recettes avec son nom   |datatables (js)| gem   |   --Colin   |[x]  |
-| Zone Admin                            | administrate  | gem   |   --Colin   |[x]   |
-| Role admin et autres                  | code          | bdd   |   --Colin     |[] à la fin  |
+| Zone Admin                            | administrate  | gem   |   --Colin   |[x]  |
+| Role admin et autres                  | code          | bdd   |   --Colin   |[x] |
 | Auto-complete recherche               | select2       | gem   |   Cyril   |[]   |
 | Recherche des recettes avec son nom   | ransak (db)   | gem   |   Cyril   |[]  |
 | Match (recherche des recettes en fonction des aliments) | code | |    Cyril |[]   |
