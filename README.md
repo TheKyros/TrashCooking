@@ -5,10 +5,10 @@ Site pour trouver quoi cuisiner avec les éléments de son frigo
 | ---------------------------------     |:-------------:| -----:| ----------- | --- |
 | Authentification                      | devise        | gem   |   --Colin   |[x]  |
 | Mail                                  | mailgun       | gem   |   --Colin   |[x]  |
-| Match (recherche des recettes en fonction des aliments)                  | code          |       |   --Colin   |[]   |
 | Auto-complete (données en bdd)        | choosen       | gem   |   --Colin   |[]   |
-| Ajouter des recettes et ingrédients ++| code          |       |   Cyril     |[]   |
-| Recherche des recettes                | ransak        | gem   |   Cyril     |[]   | 
+| Match (recherche des recettes en fonction des aliments) | code | |  --Colin |[]   |
+| Ajouter des recettes et ingrédients   | code          |       |   Cyril     |[]   |
+| Recherche des recettes avec son nom   | ransak        | gem   |   Cyril     |[]   | 
 | Admin                                 | administrate  | gem   |   Cyril     |[]   |
 | Roles                                 | code          | bdd   |   Cyril     |[]   |
 | Graphisme Interface utilisateur       | bootstrap     | gem   |   --Colin   |[]   |
