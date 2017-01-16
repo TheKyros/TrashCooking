@@ -16,11 +16,17 @@
     <%= f.text_field :name, {required:'true', class:'form-control'} %>
     </div>
     
-    <select id="select-2" name="select" multiple="true" style="    width: 100%;">
+    <div class="form-group">
+    <label for="food">Ingrédients</label>
+    <select id="select-2" name="recipe[food_id][]" multiple="true" style="width: 100%;" required=true>
+    <% if @foods.size > 0 %>
       <% @foods.each do |food| %>
-        <option value="<%= food.name %>"><%= food.name %></option> 
+        <option value="<%= food.id %>" <% if @recipe.food_ids.include?(food.id) %>selected="selected"<% end %>><%= food.name %></option>
       <% end %>
+    <% end %>
+    
     </select>
+    </div>
     
     <div class="form-group">
     <label for="category">Catégorie de la recette</label>
