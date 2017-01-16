@@ -31,9 +31,13 @@ Site pour trouver quoi cuisiner avec les éléments de son frigo
 2. `git pull origin develop`      (récupération code de GH)
 3. `git checkout -b feature/YYY`  (création de la branche)
 4. `git branch -d feature/XXX`    (supression de l'ancienne branche)
-5.
+
+## Ramener le code de GitHub vers cloud9 
+.git pull origin develop
 
 ## Heroku
 
 .Met à jour la DB dans heroku : `heroku run rake db:migrate`
 .Lie le compte cloud9 au heroku : `heroku git:remote -a Nom-de-l'app`
+
+
