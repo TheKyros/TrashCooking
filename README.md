@@ -43,3 +43,5 @@ Site pour trouver quoi cuisiner avec les éléments de son frigo
 .Lie le compte cloud9 au heroku : `heroku git:remote -a Nom-de-l'app`
 
 
+##DB
+.rails console
