@@ -32,7 +32,7 @@
     <%= @recipe.description %>
     </p>
     <p>
-    <%= image_tag @recipe.photo %>
+    <%= image_tag @recipe.photo(:medium) %>
     </p>
 
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |

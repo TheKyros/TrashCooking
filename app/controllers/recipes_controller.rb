@@ -4,8 +4,10 @@ class RecipesController < ApplicationController
   # GET /recipes
   # GET /recipes.json
   def index
-    @recipes = Recipe.all
+    @q = Recipe.ransack(params[:q])
+    @recipes = @q.result.includes(:foods)
   end
+  
 
   # GET /recipes/1
   # GET /recipes/1.json
