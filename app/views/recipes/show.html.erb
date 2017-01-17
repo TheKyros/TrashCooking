@@ -1,5 +1,40 @@
 <p id="notice"><%= notice %></p>
-<div class="col-lg-12">
+<div class="col-lg-6">
+<h1><%= @recipe.name %></h1>
+    <p>Catégorie : 
+    <%= @recipe.category %>
+    </p>
+    <p>Recette pour : 
+    <%= @recipe.how_many_ppl %>
+     personne(s)
+    </p>
+    <p>Difficulté : 
+    <%= @recipe.difficulty %>
+    </p>
+    <p>Temps de préparation : 
+    <%= @recipe.preparation_time %>
+    min
+    </p>
+    <p>Temps de cuisson : 
+    <%= @recipe.cook_time %>
+    min
+    </p>
+    <p>Ingrédients : </p>
+    <ul>
+        <% @recipe.foods.each do |food| %>
+        <li><%= food.name %></li>
+        <% end %>
+    </ul>        
+    <p>Ingrédients facultatifs : 
+    <%= @recipe.optional_food %>
+    </p>
+    <p>Description : 
+    <%= @recipe.description %>
+    </p>
+    <p>
+    <%= image_tag @recipe.photo %>
+    </p>
+
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
 <%= link_to 'Back', recipes_path %>
 </div>
