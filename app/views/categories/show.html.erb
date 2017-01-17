@@ -20,15 +20,6 @@
         <span class="glyphicon glyphicon-eye-open" style="color:green"></span>
         <% end %>
         </span>
-        <%= link_to edit_category_food_path(@category, food) do %> 
-        <span class="glyphicon glyphicon-edit"></span>
-        <% end %>
-      </span>
-      <span>
-        <%= link_to category_food_path(@category, food), method: :delete, data: { confirm: 'Are you sure?' } do %>
-        <span class="glyphicon glyphicon-trash" style="color:red"></span>
-        <% end %>
-      </span>
     </tr>
     <% end %>
   </tbody>
@@ -51,3 +42,14 @@
 <p><%= link_to 'Modifier la catégorie', edit_category_path(@category) %></p>
 <p><%= link_to 'Retour à la liste de catégories', categories_path %></p>
 </div>
+
+
+<script>
+  
+  datatable = $("table").DataTable( {
+      columnDefs: [ {
+            "targets": -1,sortable: false
+      } ]
+} );
+  
+</script>
