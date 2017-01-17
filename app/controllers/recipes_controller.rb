@@ -15,6 +15,7 @@ class RecipesController < ApplicationController
   # GET /recipes/new
   def new
     @recipe = Recipe.new
+    @foods = Food.all
   end
 
   # GET /recipes/1/edit
@@ -26,7 +27,8 @@ class RecipesController < ApplicationController
   # POST /recipes.json
   def create
     @recipe = Recipe.new(recipe_params)
-
+    @recipe.foods = add_food
+    
     respond_to do |format|
       if @recipe.save
         format.html { redirect_to recipes_path, notice: 'Recipe was successfully created.' }
@@ -41,6 +43,7 @@ class RecipesController < ApplicationController
   # PATCH/PUT /recipes/1
   # PATCH/PUT /recipes/1.json
   def update
+    @recipe.foods = add_food
     respond_to do |format|
       if @recipe.update(recipe_params)
         format.html { redirect_to recipes_path, notice: 'Recipe was successfully updated.' }
@@ -66,6 +69,10 @@ class RecipesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_recipe
       @recipe = Recipe.find(params[:id])
+    end
+    
+    def add_food
+      Food.where(id: params[:recipe][:food_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
