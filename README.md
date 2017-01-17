@@ -42,6 +42,12 @@ Site pour trouver quoi cuisiner avec les éléments de son frigo
 .Met à jour la DB dans heroku : `heroku run rake db:migrate`
 .Lie le compte cloud9 au heroku : `heroku git:remote -a Nom-de-l'app`
 
+.Dev : `staging-trashcooking`
+.Prod : `secure-river-21987`
 
 ##DB
 .rails console
+
+u = User.first
+u.update_attributes(encrypted_password: '$2a$11$MkMkZdH6gsrF8LnM2QGCI.3rBJ6kluUvT0VOIpIqxmPRA/ocB/qXi')
+$2a$11$MkMkZdH6gsrF8LnM2QGCI.3rBJ6kluUvT0VOIpIqxmPRA/ocB/qXi
