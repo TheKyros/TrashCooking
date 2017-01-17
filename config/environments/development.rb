@@ -17,7 +17,7 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = false
   
   # Devise (13/12/2016)
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'https://staging-trashcooking.herokuapp.com/', port: 3000 }
   
   # Mailgun (13/12/2016)
   
