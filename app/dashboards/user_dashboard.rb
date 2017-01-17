@@ -82,7 +82,7 @@ class UserDashboard < Administrate::BaseDashboard
     #:confirmation_token,
     :confirmed_at,
     #:confirmation_sent_at,
-    #:unconfirmed_email,
+    :unconfirmed_email,
     :isadmin,
   ].freeze
 
