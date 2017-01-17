@@ -39,6 +39,12 @@
     <p>
       <%= "Bonjour #{current_user.email}" %>
     </p>
+    <p>
+      <%if current_user.isadmin%>
+        <%= link_to 'Zone admin', admin_root_path %>
+      <%end%>
+      
+    </p>
       <p>
       <%= link_to 'Se déconnecter', destroy_user_session_path, method: :delete %>
       </p>

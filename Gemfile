@@ -73,5 +73,12 @@ gem "select2_rails"
 
 gem 'jquery-datatables-rails', '~> 3.4.0'
 
+#Administrate
+
+## Administrate
+gem "administrate", "~> 0.3.0"
+gem 'bourbon'
+
 ## paperclip
 gem "paperclip", "~> 5.0.0"
+
