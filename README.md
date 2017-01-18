@@ -32,6 +32,7 @@ Site pour trouver quoi cuisiner avec les éléments de son frigo
 1. `git checkout develop`         (Passer sur develop)
 2. `git pull origin develop`      (récupération code de GH)
 3. `git checkout -b feature/YYY`  (création de la branche)
+
 4. `git branch -d feature/XXX`    (supression de l'ancienne branche)
 
 ### Ramener le code de GitHub vers cloud9 
@@ -42,12 +43,16 @@ Site pour trouver quoi cuisiner avec les éléments de son frigo
 * Met à jour la DB dans heroku : `heroku run rake db:migrate`
 * Lie le compte cloud9 au heroku : `heroku git:remote -a Nom-de-l'app`
 
-* Dev : `staging-trashcooking`
-* Prod : `secure-river-21987`
+* Dev : `heroku git:remote -a staging-trashcooking`
+* Prod : `heroku git:remote -a secure-river-21987`
 
 ## Other
 * `rails console`
 
+### Met admin le 1er utilisateur
 u = User.first
+u.update_attributes(isadmin: true)
+
+### Passe le mot de passe à 'azertyuiop'
 u.update_attributes(encrypted_password: '$2a$11$MkMkZdH6gsrF8LnM2QGCI.3rBJ6kluUvT0VOIpIqxmPRA/ocB/qXi')
 $2a$11$MkMkZdH6gsrF8LnM2QGCI.3rBJ6kluUvT0VOIpIqxmPRA/ocB/qXi
