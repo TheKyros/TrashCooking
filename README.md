@@ -9,9 +9,8 @@ Site pour trouver quoi cuisiner avec les éléments de son frigo
 | Recherche des recettes avec son nom   |datatables (js)| gem   |   --Colin   |[x]  |
 | Zone Admin                            | administrate  | gem   |   --Colin   |[x]  |
 | Role admin et autres                  | code          | bdd   |   --Colin   |[x] |
-| Auto-complete recherche               | select2       | gem   |   Cyril   |[]   |
-| Recherche des recettes avec son nom   | ransak (db)   | gem   |   Cyril   |[]  |
-| Match (recherche des recettes en fonction des aliments) | code | |    Cyril |[]   |
+| Auto-complete recherche               | select2       | gem   |   Cyril   |[x]   |
+| Match (recherche des recettes en fonction des aliments) | code | |    Cyril |[x]   |
 | Ajouter des recettes et ingrédients   | code          |       |   Cyril     |[x]  |
 | Graphisme Interface utilisateur       | bootstrap     | gem   |   --   |[] en cours  |
 
@@ -46,13 +45,19 @@ Site pour trouver quoi cuisiner avec les éléments de son frigo
 * Dev : `heroku git:remote -a staging-trashcooking`
 * Prod : `heroku git:remote -a secure-river-21987`
 
-## Other
-* `rails console`
+## BDD
+* Accéder à la console de rails : `rails console`
+
+* Objet User :
+* `u = User.first`
+
+### Confirme l'utilisateur
+u.confirm
 
 ### Met admin le 1er utilisateur
-u = User.first
 u.update_attributes(isadmin: true)
 
 ### Passe le mot de passe à 'azertyuiop'
+
 u.update_attributes(encrypted_password: '$2a$11$MkMkZdH6gsrF8LnM2QGCI.3rBJ6kluUvT0VOIpIqxmPRA/ocB/qXi')
 $2a$11$MkMkZdH6gsrF8LnM2QGCI.3rBJ6kluUvT0VOIpIqxmPRA/ocB/qXi
