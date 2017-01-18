@@ -23,7 +23,7 @@
           <a href="<%= categories_path %>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Catégories d'ingredients <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><%= link_to 'Liste categories', categories_path %></li>
-            <%if current_user.isadmin%>
+            <%if user_signed_in && current_user.isadmin%>
             <li><%= link_to 'Nouvelle categorie', new_category_path %></li>
             <%end%>
           </ul>
