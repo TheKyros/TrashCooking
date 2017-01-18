@@ -15,18 +15,20 @@
     </thead>
     <tbody>
       <% @recipes.each do |recipe| %>
-      <tr>
-        <td><%= recipe.name %></td>
-        <td><%= recipe.difficulty %></td>
-        <td><%= recipe.category %></td>
-        <td><%= recipe.preparation_time %></td>
-        <td><%= recipe.cook_time %></td>
-        <td class="text-center">
-          <%= link_to recipe do %> 
-          <span class="glyphicon glyphicon-eye-open" style="color:green"></span>
-          <% end %>
-        </td>
-      </tr>
+        <% if recipe.validation %>
+          <tr>
+            <td><%= recipe.name %></td>
+            <td><%= recipe.difficulty %></td>
+            <td><%= recipe.category %></td>
+            <td><%= recipe.preparation_time %></td>
+            <td><%= recipe.cook_time %></td>
+            <td class="text-center">
+              <%= link_to recipe do %> 
+              <span class="glyphicon glyphicon-eye-open" style="color:green"></span>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
       <% end %>
     </tbody>
   </table>
