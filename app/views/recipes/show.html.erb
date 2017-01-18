@@ -36,7 +36,9 @@
         <%= image_tag @recipe.photo(:medium) %>
         </p>
     <% end %>
+
 <% if current_user.isadmin %>
+
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
 <% end %>
 <%= link_to 'Retour', recipes_path %>
