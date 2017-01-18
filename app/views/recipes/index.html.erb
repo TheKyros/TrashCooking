@@ -1,39 +1,82 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Recipes</h1>
+<h1>Liste de recettes</h1>
+<div class="col-lg-6">
+  <table class="table table-condensed dataTable no-footer" style="width: 500px;">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Difficulté</th>
+        <th>Catégorie</th>
+        <th>Temps de préparation</th>
+        <th>Temps de cuisson</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @recipes.each do |recipe| %>
+      <tr>
+        <td><%= recipe.name %></td>
+        <td><%= recipe.difficulty %></td>
+        <td><%= recipe.category %></td>
+        <td><%= recipe.preparation_time %></td>
+        <td><%= recipe.cook_time %></td>
+        <td class="text-center">
+          <%= link_to recipe do %> 
+          <span class="glyphicon glyphicon-eye-open" style="color:green"></span>
+          <% end %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  
+  <br>
+  
+  <%= link_to 'Nouvelle recette', new_recipe_path %>
 
-<table class="table table-condensed" style="width: 500px;">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @recipes.each do |recipe| %>
-    <tr>
-      <td><%= recipe.name %></td>
-      <td class="text-center">
-        <%= link_to recipe do %> 
-        <span class="glyphicon glyphicon-eye-open" style="color:green"></span>
-        <% end %>
-      </td>
-      <td class="text-center">
-        <%= link_to edit_recipe_path(recipe) do %> 
-        <span class="glyphicon glyphicon-edit"></span>
-        <% end %>
-      </td>
-      <td class="text-center">
-        <%= link_to recipe, method: :delete, data: { confirm: 'Are you sure?' } do %>
-        <span class="glyphicon glyphicon-trash" style="color:red"></span>
-        <% end %>
-      </td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
+</div>
+<script>
+     
+      
+datatable = $("table").DataTable( {
+      columnDefs: [ {
+            "targets": -1,sortable: false
+      } ]
+} );
 
 
-<br>
+    yadcf.init(datatable,
+        [
+            {
+                column_number : 0,
+                column_data_type: "html",
+                filter_type: "text",
+                enable_auto_complete: 1,
+            }, 
+            {
+                column_number: 1,
+                filter_type: "range_number",
+            },
+            {
+                column_number: 2,
+                filter_type: "select",
+                html_data_type: "text",
+            },
+            {
+                column_number: 3,
+                filter_type: "range_number",
+            },
+            {
+                column_number: 4,
+                filter_type: "range_number",
+            },
 
-<%= link_to 'New Recipe', new_recipe_path %>
+        ],
+        {
+            cumulative_filtering: true
+        }
+    );
+  
+  
+</script>

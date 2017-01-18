@@ -1,7 +1,16 @@
-    <h1>Welcome</h1>
-    <p>
-        <h2>Rechercher les aliments</h2>
-    </p>
-    <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
+    <h1>Rechercher une recette avec vos aliments</h1>
+    
+    <%= search_form_for @q do |f| %>
+     <div class="form-group">
+         <label for="food">Ingredients</label>
+          <select id="select-2" name="q[foods_id_in][]" multiple="true" style="width: 100%;" required=true>
+            <% if @foods.size > 0 %>
+              <% @foods.each do |food| %>
+                <option value="<%= food.id %>"><%= food.name %></option>
+              <% end %>
+            <% end %>
+          </select>
+        </div>
+        <%= f.submit 'Rechercher', {class: 'btn btn-secondary'} %>
+    <% end %>
+
