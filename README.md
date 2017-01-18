@@ -46,12 +46,27 @@ Site pour trouver quoi cuisiner avec les éléments de son frigo
 * Dev : `heroku git:remote -a staging-trashcooking`
 * Prod : `heroku git:remote -a secure-river-21987`
 
+<<<<<<<<< saved version
 ## Other
 * `rails console`
+=========
+## BDD
+* Accéder à la console de rails : `rails console`
+
+* Objet User :
+* `u = User.first`
+
+### Confirme l'utilisateur
+`u.confirm`
+>>>>>>>>> local version
 
 ### Met admin le 1er utilisateur
+<<<<<<<<< saved version
 u = User.first
 u.update_attributes(isadmin: true)
+=========
+`u.update_attributes(isadmin: true)`
+>>>>>>>>> local version
 
 ### Passe le mot de passe à 'azertyuiop'
 u.update_attributes(encrypted_password: '$2a$11$MkMkZdH6gsrF8LnM2QGCI.3rBJ6kluUvT0VOIpIqxmPRA/ocB/qXi')
