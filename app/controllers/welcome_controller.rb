@@ -4,6 +4,10 @@ class WelcomeController < ApplicationController
 
     
     def index
+        @foods = Food.all
+        @q = Recipe.ransack(params[:q])
     end
+    
+    
     
 end
