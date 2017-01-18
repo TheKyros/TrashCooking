@@ -24,7 +24,7 @@
     <% end %>
   </tbody>
 </table>
-<% if current_user.isadmin %>
+<% if current_user && current_user.isadmin %>
 <%= link_to 'Ajouter une categorie', new_category_path %>
 <% end %>
 </div>
