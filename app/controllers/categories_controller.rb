@@ -15,16 +15,19 @@ class CategoriesController < ApplicationController
 
   # GET /categories/new
   def new
+    authenticate_admin
     @category = Category.new
   end
 
   # GET /categories/1/edit
   def edit
+    authenticate_admin
   end
 
   # POST /categories
   # POST /categories.json
   def create
+    authenticate_admin
     @category = Category.new(category_params)
 
     respond_to do |format|
@@ -72,4 +75,5 @@ class CategoriesController < ApplicationController
     def category_params
       params.required(:category).permit(:name)
     end
+    
 end
