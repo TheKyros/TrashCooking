@@ -22,6 +22,7 @@ class RecipesController < ApplicationController
 
   # GET /recipes/1/edit
   def edit
+    authenticate_admin
     @foods = Food.all
   end
 
