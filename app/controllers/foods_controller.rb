@@ -15,11 +15,13 @@ class FoodsController < ApplicationController
 
   # GET /foods/new
   def new
+    authenticate_admin
     @food = Food.new
   end
 
   # GET /foods/1/edit
   def edit
+    authenticate_admin
   end
 
   # POST /foods

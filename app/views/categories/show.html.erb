@@ -15,11 +15,11 @@
     <tr>
       <td><%= food.name %></td>
       <td class="text-center">
-        <span>
-        <%= link_to category_food_path(@category, food) do %> 
-        <span class="glyphicon glyphicon-eye-open" style="color:green"></span>
+        <% if current_user.isadmin %>
+          <%= link_to category_food_path(@category, food) do %> 
+          <span class="glyphicon glyphicon-eye-open" style="color:green"></span>
+          <% end %>
         <% end %>
-        </span>
     </tr>
     <% end %>
   </tbody>
@@ -27,19 +27,13 @@
 </div>
 </div>
 <div class="col-lg-6">
-<h3>Rechercher</h3>
-
-<select id="select-2" name="select" multiple="true" style="    width: 100%;">
-      <% @category.foods.each do |food| %>
-      <option value="<%= food.name %>"><%= food.name %></option> 
-    <% end %>
-</select>
-
+<% if current_user.isadmin %>
 <p>
 <%= link_to 'Ajouter un aliment', new_category_food_path(@category) %>
 </p>
 
 <p><%= link_to 'Modifier la catégorie', edit_category_path(@category) %></p>
+<% end %>
 <p><%= link_to 'Retour à la liste de catégories', categories_path %></p>
 </div>
 
