@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170116162657) do
+ActiveRecord::Schema.define(version: 20170118094320) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -42,14 +42,15 @@ ActiveRecord::Schema.define(version: 20170116162657) do
     t.string   "optional_food"
     t.string   "description"
     t.string   "photo"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
     t.integer  "cook_time"
     t.integer  "preparation_time"
     t.string   "photo_file_name"
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+    t.boolean  "validation",         default: false
   end
 
   create_table "users", force: :cascade do |t|

@@ -31,10 +31,15 @@
     <p>Description : 
     <%= @recipe.description %>
     </p>
-    <p>
-    <%= image_tag @recipe.photo(:medium) %>
-    </p>
+    <% if @recipe.photo.exists? %>
+        <p>
+        <%= image_tag @recipe.photo(:medium) %>
+        </p>
+    <% end %>
+
+<% if current_user.isadmin %>
 
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
-<%= link_to 'Back', recipes_path %>
+<% end %>
+<%= link_to 'Retour', recipes_path %>
 </div>

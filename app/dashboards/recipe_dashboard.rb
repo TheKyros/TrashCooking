@@ -21,6 +21,7 @@ class RecipeDashboard < Administrate::BaseDashboard
     updated_at: Field::DateTime,
     cook_time: Field::Number,
     preparation_time: Field::Number,
+    validation: Field::Boolean,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -33,6 +34,7 @@ class RecipeDashboard < Administrate::BaseDashboard
     :foods,
     :name,
     :how_many_ppl,
+    :validation,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -51,6 +53,7 @@ class RecipeDashboard < Administrate::BaseDashboard
     :updated_at,
     :cook_time,
     :preparation_time,
+    :validation,
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -64,9 +67,9 @@ class RecipeDashboard < Administrate::BaseDashboard
     :difficulty,
     :optional_food,
     :description,
-    :photo,
     :cook_time,
     :preparation_time,
+    :validation,
   ].freeze
 
   # Overwrite this method to customize how recipes are displayed
