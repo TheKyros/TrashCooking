@@ -24,6 +24,7 @@
           <ul class="dropdown-menu">
             <li><%= link_to 'Liste categories', categories_path %></li>
 
+
             <%if current_user && current_user.isadmin %>
 
             <li><%= link_to 'Nouvelle categorie', new_category_path %></li>
@@ -44,9 +45,10 @@
           <ul class="dropdown-menu">
             
             <li>
+
               <%if current_user && current_user.isadmin%>
                 <%= link_to 'Zone admin', admin_root_path %>
-              <%end%>
+              <% end %>
               
             </li>
               <li>
